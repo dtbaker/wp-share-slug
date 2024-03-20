@@ -25,7 +25,8 @@ function sample_parse_query( $query ) {
 		if ( $post_check ) {
 			// We have found this other post type! yay!
 			// Overwrite the global post_type query var so WordPress can keep rendering our expected page.
-			$query->query_vars['post_type'] = 'custom_articles';
+			$query->query['post_type'] = $post_type;
+			$query->query_vars['post_type'] = $post_type;
 		}
 	}
 
